@@ -3,7 +3,7 @@ return{
   event = "VeryLazy",
   keys = {
     { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle pin" },
-    {"<leader>bd", "<Cmd>BufferLineClose<CR>", desc = "Delete buffer" },
+    {"<leader>bd", "<Cmd>BufferLinePickClose<CR>", desc = "Delete buffer" },
     { "<leader>bD", "<Cmd>BufferLineCloseAllButCurrent<CR>", desc = "Delete all but current buffer" },
     { "<leader>bO", "<Cmd>BufferLineCloseAllButPinned<CR>", desc = "Delete all but pinned buffers" },
     { "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete non-pinned buffers" },
