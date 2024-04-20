@@ -6,6 +6,12 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>ce', vim.diagnostic.open_float, { desc = 'Show diagnosti[C] [E]rror messages' })
 vim.keymap.set('n', '<leader>cq', vim.diagnostic.setloclist, { desc = 'Open diagnosti[C] [Q]uickfix list' })
 
+--move lines
+vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
+vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
+vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
+vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
+
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })

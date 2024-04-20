@@ -7,7 +7,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     {
       'nvim-telescope/telescope-file-browser.nvim',
       vim.api.nvim_set_keymap('n', '<space>fp', ':Telescope file_browser<CR>', { noremap = true }),
-      dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' },
+      dependencies = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim', 'debugloop/telescope-undo.nvim' },
     },
 
     { -- If encountering errors, see telescope-fzf-native README for install instructions
@@ -72,7 +72,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     -- Enable telescope extensions, if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
-
+    pcall(require('telescope').load_extension 'undo')
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
