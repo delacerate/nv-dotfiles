@@ -1,6 +1,7 @@
 return {
   'akinsho/bufferline.nvim',
-  event = 'VeryLazy',
+  event = 'BufWinEnter',
+
   keys = {
     { '<leader>bp', '<Cmd>BufferLineTogglePin<CR>', desc = 'Toggle pin' },
     { '<leader>bO', '<Cmd>BufferLineCloseAllButPinned<CR>', desc = 'Delete all but pinned buffers' },
